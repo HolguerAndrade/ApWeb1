@@ -1,10 +1,24 @@
 ﻿<html>
 <head>
 <title>Erase una vez HTML</title>
+
+<script language="JavaScript">
+var id,pause=0,position=0;
+function textoMovido() {
+var i,k,msg="               Estamos trabajando en GIT HUB                  ";
+k=(100/msg.length)+1;
+for(i=0;i<=k;i++) msg+=" "+msg;
+document.form2.textoMovido.value=msg.substring(position,position+100);
+if(position++==100) position=0;
+id=setTimeout("textoMovido()",100); }
+//-->
+</script>
+
+
 </head>
 
-<body>
-
+<BODY bgcolor="white" onload="textoMovido()">
+<form name=form2><input type="text" name="textoMovido" size="40"></form>
 <h1>Erase una vez</h1>
 <h2>El padre</h2>
 <p>El padre de la web, <strong>Tim Berners-Lee</strong>, es tambien el padre de HTML.</p>
